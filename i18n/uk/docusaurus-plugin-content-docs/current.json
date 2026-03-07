@@ -3,8 +3,20 @@
     "message": "Поточна",
     "description": "The label for version current"
   },
-  "sidebar.docs.category.Getting Started": {
-    "message": "Початок роботи",
-    "description": "The label for category 'Getting Started' in sidebar 'docs'"
+  "sidebar.docs.category.Core Concepts": {
+    "message": "Основні концепції",
+    "description": "The label for category 'Core Concepts' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Launch": {
+    "message": "Запуск",
+    "description": "The label for category 'Launch' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Services": {
+    "message": "Сервіси",
+    "description": "The label for category 'Services' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.API Reference": {
+    "message": "API Довідник",
+    "description": "The label for category 'API Reference' in sidebar 'docs'"
   }
 }

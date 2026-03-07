@@ -23,6 +23,7 @@ const config = {
   projectName: 'docs',
 
   onBrokenLinks: 'throw',
+  trailingSlash: true,
 
   i18n: {
     defaultLocale: 'en',
