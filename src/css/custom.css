@@ -125,6 +125,35 @@ html[data-theme='dark'] {
   margin-right: 0.5rem;
 }
 
+@media (max-width: 996px) {
+  .navbar-sidebar .menu__link {
+    padding-right: 2rem;
+  }
+
+  .navbar-sidebar .menu__list-item-collapsible .menu__link {
+    padding-right: 2.5rem;
+  }
+
+  .navbar__inner {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .navbar__brand {
+    margin-right: 0;
+    padding: 0 0.75rem;
+  }
+
+  .navbar__toggle {
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
+
+  .navbar__items--right {
+    flex-direction: row-reverse;
+  }
+}
+
 .footer--dark {
   background: rgba(10, 10, 26, 0.9);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
