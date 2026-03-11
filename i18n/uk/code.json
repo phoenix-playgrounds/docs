@@ -325,5 +325,33 @@
   "theme.tags.tagsPageTitle": {
     "message": "Теги",
     "description": "The title of the tag list page"
+  },
+  "theme.SearchBar.label": {
+    "message": "Пошук",
+    "description": "The ARIA label and placeholder for search button"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Показати всі результати",
+    "description": "The label for see all search results"
+  },
+  "theme.SearchPage.searchResultCount.plurals": {
+    "message": "Знайдено {count} документ|Знайдено {count} документи|Знайдено {count} документів",
+    "description": "Pluralized label for search result count"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Документів не знайдено",
+    "description": "The paragraph for empty search result"
+  },
+  "theme.SearchPage.searchResultsFor": {
+    "message": "Результати пошуку для \"{keyword}\"",
+    "description": "The search page title for keyword"
+  },
+  "theme.SearchPage.documentsFoundPlurals": {
+    "message": "Знайдено {count} документ|Знайдено {count} документи|Знайдено {count} документів",
+    "description": "Pluralized label for documents found"
+  },
+  "theme.SearchBar.placeholder": {
+    "message": "Пошук у документації",
+    "description": "The placeholder of the search input"
   }
 }

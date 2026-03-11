@@ -80,7 +80,7 @@ Subdomains are defined on the Playspec level as defaults, but can be **overridde
 
 ## Mounted Files
 
-You can attach up to **3 files** (maximum **2 MB each**) to a Playspec. These files are synced to the remote host and mounted into specified services. Common use cases:
+You can attach up to **50 files** (maximum **500 MB each**) to a Playspec. These files are synced to the remote host and mounted into specified services. Common use cases:
 
 - Configuration files (e.g., `nginx.conf`, `.env.production`)
 - SSL certificates
@@ -132,5 +132,5 @@ When disabled, volumes are destroyed and recreated with each Playground recreati
 | Limit | Value |
 |-------|-------|
 | Maximum Playspecs per account | **1,000** |
-| Maximum mounted files per Playspec | **3** |
-| Maximum file size | **2 MB** per file |
+| Maximum mounted files per Playspec | **50** |
+| Maximum file size | **500 MB** per file |

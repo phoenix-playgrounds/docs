@@ -302,3 +302,189 @@ html[data-theme='dark'] {
 .footer-legal-separator {
   color: rgba(241, 245, 249, 0.15);
 }
+
+/* ─── Search Modal — Glassmorphism Overrides ────────────────────────── */
+
+html[data-theme='dark'] {
+  /* Search-local CSS custom properties */
+  --search-local-modal-background: rgba(10, 10, 26, 0.92);
+  --search-local-modal-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 80px rgba(52, 211, 153, 0.06);
+  --search-local-modal-width: 620px;
+  --search-local-hit-background: rgba(255, 255, 255, 0.03);
+  --search-local-hit-active-color: var(--ifm-font-color-base);
+  --search-local-highlight-color: var(--accent);
+  --search-local-hit-color: var(--ifm-font-color-base);
+  --search-local-muted-color: var(--text-muted);
+  --search-local-icon-stroke-width: 1.4;
+  --search-local-hit-height: 56px;
+  --search-local-icon-color: var(--text-muted);
+  --search-local-hit-shadow: none;
+  --search-local-hit-active-shadow: none;
+}
+
+/* Modal container — glass panel */
+.search-result-match {
+  color: var(--accent);
+  background: rgba(52, 211, 153, 0.12);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+[data-theme='dark'] .DocSearch-Modal,
+[data-theme='dark'] .search-local-modal {
+  background: rgba(10, 10, 26, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 80px rgba(52, 211, 153, 0.06);
+}
+
+/* Search input area */
+[data-theme='dark'] .DocSearch-SearchBar,
+[data-theme='dark'] .search-local-search-bar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.25rem 0;
+}
+
+[data-theme='dark'] .DocSearch-Form,
+[data-theme='dark'] .search-local-form {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color 0.2s ease;
+}
+
+[data-theme='dark'] .DocSearch-Form:focus-within,
+[data-theme='dark'] .search-local-form:focus-within {
+  border-color: rgba(52, 211, 153, 0.3);
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.06);
+}
+
+[data-theme='dark'] .DocSearch-Input,
+[data-theme='dark'] .search-local-input {
+  color: var(--text-primary);
+  font-family: var(--ifm-font-family-base);
+  font-size: 1rem;
+}
+
+[data-theme='dark'] .DocSearch-Input::placeholder,
+[data-theme='dark'] .search-local-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Hit items — glass cards */
+[data-theme='dark'] .DocSearch-Hit a,
+[data-theme='dark'] .search-local-hit a {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+[data-theme='dark'] .DocSearch-Hit[aria-selected='true'] a,
+[data-theme='dark'] .search-local-hit--active a {
+  background: rgba(52, 211, 153, 0.1);
+  border-color: rgba(52, 211, 153, 0.2);
+  box-shadow: 0 4px 16px rgba(52, 211, 153, 0.08);
+}
+
+[data-theme='dark'] .DocSearch-Hit-title,
+[data-theme='dark'] .search-local-hit-title {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+[data-theme='dark'] .DocSearch-Hit-path,
+[data-theme='dark'] .search-local-hit-path {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* Footer — subtle glass */
+[data-theme='dark'] .DocSearch-Footer,
+[data-theme='dark'] .search-local-footer {
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0 0 16px 16px;
+}
+
+/* Keyboard shortcut badges */
+[data-theme='dark'] .DocSearch-Commands-Key,
+[data-theme='dark'] .search-result-key {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: var(--text-muted);
+  box-shadow: none;
+  font-size: 0.72rem;
+  padding: 1px 5px;
+}
+
+/* Search bar — navbar integration */
+[data-theme='dark'] .navbar__search-input {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--ifm-font-family-base);
+  transition: all 0.2s ease;
+}
+
+[data-theme='dark'] .navbar__search-input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(52, 211, 153, 0.25);
+  box-shadow: 0 0 16px rgba(52, 211, 153, 0.06);
+  outline: none;
+}
+
+[data-theme='dark'] .navbar__search-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ⌘K shortcut hint styling in search bar */
+[data-theme='dark'] .search-bar-shortcut-hint {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  padding: 1px 5px;
+}
+
+/* Search results page styling */
+[data-theme='dark'] .search-result-page {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+}
+
+[data-theme='dark'] .search-result-page:hover {
+  border-color: rgba(52, 211, 153, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay backdrop */
+[data-theme='dark'] .DocSearch-Container,
+[data-theme='dark'] .search-local-container {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Mobile responsive search */
+@media (max-width: 996px) {
+  html[data-theme='dark'] {
+    --search-local-modal-width: calc(100vw - 2rem);
+  }
+
+  [data-theme='dark'] .DocSearch-Modal,
+  [data-theme='dark'] .search-local-modal {
+    border-radius: 12px;
+    margin: 1rem;
+  }
+}
