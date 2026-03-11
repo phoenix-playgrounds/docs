@@ -13,18 +13,19 @@ Templates are reusable, versioned environment blueprints written in YAML. They d
 A template body is a standard YAML document with two parts:
 
 1. **Docker Compose definition** — The `services`, `volumes`, `networks`, etc.
-2. **Variable declarations** — A special `playground-variables` section that declares all variables used in the template
+2. **Variable declarations** — A `playgrounds.dev` section with a nested `variables` block that declares all variables used in the template
 
 ### Example
 
 ```yaml
-playground-variables:
-  project_name:
-    name: "Project Name"
-    validation: "/^[a-z][a-z0-9-]{2,30}$/"
-  db_password:
-    name: "Database Password"
-    validation: "/^.{8,}$/"
+playgrounds.dev:
+  variables:
+    project_name:
+      name: "Project Name"
+      validation: "/^[a-z][a-z0-9-]{2,30}$/"
+    db_password:
+      name: "Database Password"
+      validation: "/^.{8,}$/"
 
 services:
   web:
@@ -54,7 +55,7 @@ Template variables are placeholders in the format `$$var__NAME` or `$$random__NA
 
 ### Variable Declarations
 
-Every variable referenced in the template body **must** be declared in the `playground-variables` section, and every declared variable **must** be referenced at least once. The platform validates this consistency when creating a version.
+Every variable referenced in the template body **must** be declared in the `playgrounds.dev > variables` section, and every declared variable **must** be referenced at least once. The platform validates this consistency when creating a version.
 
 Each variable declaration supports:
 
@@ -68,10 +69,11 @@ Each variable declaration supports:
 When a `validation` regex is specified, the launch form enforces it client-side. For example:
 
 ```yaml
-playground-variables:
-  app_name:
-    name: "Application Name"
-    validation: "/^[a-z][a-z0-9-]{2,30}$/"
+playgrounds.dev:
+  variables:
+    app_name:
+      name: "Application Name"
+      validation: "/^[a-z][a-z0-9-]{2,30}$/"
 ```
 
 This ensures the user enters a lowercase, hyphen-separated name between 3 and 31 characters.
